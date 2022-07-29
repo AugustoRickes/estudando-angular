@@ -1,6 +1,3 @@
-import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
-import { LandingPageComponent } from './modulo-teste/landing-page/landing-page.component';
-import { ModuloComponent } from './modulo-teste/modulo/modulo.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CicloDeVidaComponent } from './ciclo-de-vida/ciclo-de-vida/ciclo-de-vida.component';
 import { ComponentAngularComponent } from './component-angular/component-angular.component';
