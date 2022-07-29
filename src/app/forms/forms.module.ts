@@ -1,7 +1,8 @@
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -11,7 +12,8 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     TemplateDrivenComponent

@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Hero } from './model/hero';
 
 @Component({
   selector: 'app-template-driven',
@@ -8,21 +10,19 @@ import { NgForm } from '@angular/forms';
 })
 export class TemplateDrivenComponent implements OnInit {
 
-  constructor() { }
+  http: HttpClient;
+
+  constructor(http: HttpClient) {
+    this.http = http;
+  }
 
   ngOnInit(): void {
   }
 
-  hero: any = {
-    name: "clark kent",
-    nameHero: "super man",
-    force: "super forca",
-    age: 40
-  }
+  hero: Hero = new Hero();
 
   onSubmit(form: NgForm): void {
-    console.log(this.hero);
-    console.log(form.value);
-
+    this.hero = form.value;
+    //this.http.post("/back-end", JSON.stringify(this.hero));
   }
 }

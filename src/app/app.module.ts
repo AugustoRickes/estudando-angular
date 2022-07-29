@@ -1,6 +1,4 @@
-import { FormsModule2 } from './forms/forms.module';
-import { ModuloTesteModule } from './modulo-teste/modulo-teste.module';
-import { LOCALE_ID, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RoutingModule } from './app-routing.module';
 
@@ -13,8 +11,8 @@ import { PipesModule } from './pipes/pipes.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { DiretivasModule } from './diretivas/diretivas.module';
 import { ComunicacaoDeComponentesModule } from './comunicacao-de-componentes/comunicacao-de-componentes.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ModuloTesteModule } from './modulo-teste/modulo-teste.module';
+import { FormsModule2 } from './forms/forms.module';
 
 @NgModule({
   declarations: [
@@ -32,14 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DiretivasModule,
     ComunicacaoDeComponentesModule,
     ModuloTesteModule,
-    BrowserAnimationsModule,
     FormsModule2
-  ],
-  providers: [
-    {
-      provide: LOCALE_ID,
-      useValue: "pt-BR"
-    }
   ],
   bootstrap: [AppComponent]
 })
